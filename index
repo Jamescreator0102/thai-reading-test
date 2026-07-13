@@ -1,1 +1,118 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
 
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>แบบทดสอบการอ่านคำ</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <main class="app">
+
+    <!-- หน้าเริ่มต้น -->
+    <section id="startPage" class="card">
+      <div class="logo">🎤</div>
+
+      <h1>แบบทดสอบการอ่านคำ</h1>
+
+      <p class="subtitle">
+        อ่านคำที่ปรากฏให้ชัดเจน
+      </p>
+
+      <input
+        id="studentName"
+        type="text"
+        placeholder="กรอกชื่อผู้ทดสอบ"
+        autocomplete="off"
+      >
+
+      <button id="startButton" class="primary-button">
+        เริ่มทดสอบ
+      </button>
+
+      <p id="startMessage" class="message"></p>
+    </section>
+
+    <!-- หน้าทดสอบ -->
+    <section id="testPage" class="card hidden">
+
+      <div class="top-bar">
+        <div class="badge">
+          คำที่
+          <span id="currentNumber">1</span>
+          /
+          <span id="totalWords">10</span>
+        </div>
+
+        <div class="badge">
+          คะแนน
+          <span id="score">0</span>
+        </div>
+      </div>
+
+      <p class="instruction">
+        อ่านคำต่อไปนี้
+      </p>
+
+      <div id="wordDisplay" class="word-display">
+        คำศัพท์
+      </div>
+
+      <button id="microphoneButton" class="microphone-button">
+        <span class="microphone-icon">🎤</span>
+        <span id="microphoneText">กดเพื่ออ่าน</span>
+      </button>
+
+      <p id="microphoneStatus" class="message">
+        กดปุ่มไมโครโฟนแล้วเริ่มอ่าน
+      </p>
+
+      <div id="recognizedBox" class="recognized-box hidden">
+        ระบบได้ยินว่า
+        <strong id="recognizedText"></strong>
+      </div>
+
+      <div id="resultBox" class="result-box hidden"></div>
+
+      <button id="nextButton" class="primary-button hidden">
+        คำถัดไป
+      </button>
+
+    </section>
+
+    <!-- หน้าสรุปผล -->
+    <section id="summaryPage" class="card hidden">
+
+      <div class="summary-icon">🏆</div>
+
+      <h1>ทดสอบเสร็จแล้ว</h1>
+
+      <p id="summaryName" class="subtitle"></p>
+
+      <div class="final-score">
+        <span id="finalScore">0</span>
+        /
+        <span id="finalTotal">10</span>
+      </div>
+
+      <p id="summaryMessage" class="subtitle"></p>
+
+      <button id="restartButton" class="primary-button">
+        ทดสอบอีกครั้ง
+      </button>
+
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
